@@ -24,16 +24,16 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "business@shiyabhardwaj.com",
+      value: "swarnimkesharwani4@gmail.com",
       description: "For business inquiries and collaborations",
-      link: "mailto:business@shiyabhardwaj.com",
+      link: "mailto:swarnimkesharwani4@gmail.com",
     },
     {
       icon: Instagram,
       title: "Instagram",
-      value: "@shiyabhardwaj",
+      value: "@shiyyabhardwaj",
       description: "Follow for daily updates and content",
-      link: "https://instagram.com/shiyabhardwaj",
+      link: "https://www.instagram.com/shiyyabhardwaj/",
     },
     {
       icon: MessageCircle,
@@ -75,12 +75,29 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! I'll get back to you soon.")
-    setFormData({ name: "", email: "", subject: "", message: "" })
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Thank you for your message! I'll get back to you soon.")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        const error = await response.json()
+        alert(`Error: ${error.error}`)
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      alert("Something went wrong. Please try again.")
+    }
   }
 
   return (
@@ -109,7 +126,7 @@ export default function ContactPage() {
                 Contact
               </Link>
             </div>
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="sm"
@@ -258,8 +275,8 @@ export default function ContactPage() {
                   </p>
                   <p>
                     For business inquiries, please use the contact form or email me directly at{" "}
-                    <Link href="mailto:business@shiyabhardwaj.com" className="text-rose-600 hover:text-rose-700">
-                      business@shiyabhardwaj.com
+                    <Link href="mailto:swarnimkesharwani4@gmail.com" className="text-rose-600 hover:text-rose-700">
+                      swarnimkesharwani4@gmail.com
                     </Link>
                   </p>
                 </div>
@@ -309,7 +326,7 @@ export default function ContactPage() {
                 Start a Project
               </Button>
             </Link>
-            <Link href="mailto:business@shiyabhardwaj.com">
+            <Link href="mailto:swarnimkesharwani4@gmail.com">
               <Button
                 size="lg"
                 variant="outline"

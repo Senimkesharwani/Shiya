@@ -94,11 +94,37 @@ export default function CollaboratePage() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you for your inquiry! I'll get back to you within 24 hours.")
+
+    try {
+      const response = await fetch("/api/collaborate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Thank you for your collaboration inquiry! I'll get back to you within 24 hours.")
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          projectType: "",
+          budget: "",
+          timeline: "",
+          message: "",
+        })
+      } else {
+        const error = await response.json()
+        alert(`Error: ${error.error}`)
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      alert("Something went wrong. Please try again.")
+    }
   }
 
   return (
@@ -127,7 +153,7 @@ export default function CollaboratePage() {
                 Contact
               </Link>
             </div>
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="sm"

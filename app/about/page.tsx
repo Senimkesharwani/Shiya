@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Contact
               </Link>
             </div>
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="sm"
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=500"
+                  src="/placeholder.jpg?height=600&width=500"
                   alt="Shiya Bhardwaj - About"
                   fill
                   className="object-cover"
@@ -215,7 +215,7 @@ export default function AboutPage() {
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=320&width=400"
+                  src="/placeholder.jpg?height=320&width=400"
                   alt="Shiya's early content"
                   fill
                   className="object-cover"
@@ -226,7 +226,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg order-2 md:order-1">
                 <Image
-                  src="/placeholder.svg?height=320&width=400"
+                  src="/placeholder.jpg?height=320&width=400"
                   alt="Shiya creating content"
                   fill
                   className="object-cover"

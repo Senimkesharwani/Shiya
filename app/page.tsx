@@ -66,7 +66,7 @@ export default function HomePage() {
                 Contact
               </Link>
             </div>
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="sm"
@@ -213,7 +213,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
@@ -299,7 +299,7 @@ export default function HomePage() {
                 Fashion & Lifestyle Influencer helping brands connect with their audience through authentic content.
               </p>
               <div className="flex space-x-4">
-                <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.instagram.com/shiyyabhardwaj/" target="_blank" rel="noopener noreferrer">
                   <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
                     <Instagram className="w-5 h-5" />
                   </Button>
@@ -326,7 +326,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-400">
-                <p>business@shiyabhardwaj.com</p>
+                <p>swarnimkesharwani4@gmail.com</p>
                 <p>For collaborations & partnerships</p>
               </div>
             </div>

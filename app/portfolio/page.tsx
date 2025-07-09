@@ -148,7 +148,7 @@ export default function PortfolioPage() {
                 Contact
               </Link>
             </div>
-            <Link href="https://instagram.com/shiyabhardwaj" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/shiyyabhardwaj" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="sm"
